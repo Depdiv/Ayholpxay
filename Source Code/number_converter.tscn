@@ -1,0 +1,241 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvcf0oshy0weq"]
+
+[ext_resource type="Script" uid="uid://dp3wf6rfaibib" path="res://number_converter.gd" id="1_7ygc3"]
+[ext_resource type="PackedScene" uid="uid://c11nk26g8d33n" path="res://number.tscn" id="2_nwc2r"]
+[ext_resource type="Theme" uid="uid://bdse7cv2xqikw" path="res://themes/num_converter_keyboard_key_theme.tres" id="3_yvmwk"]
+[ext_resource type="Theme" uid="uid://doc18guyciieo" path="res://themes/num_converter_confirm_button.tres" id="4_yvmwk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7ygc3"]
+
+[sub_resource type="FontFile" id="FontFile_7ygc3"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[node name="Number Converter" type="Node2D"]
+script = ExtResource("1_7ygc3")
+
+[node name="Number" parent="." instance=ExtResource("2_nwc2r")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.1764706, 0.1764706, 0.1764706, 1)
+position = Vector2(576, 250)
+scale = Vector2(418.5, 63.5)
+texture = SubResource("CanvasTexture_7ygc3")
+
+[node name="Number Converter" type="Label" parent="."]
+offset_left = 450.0
+offset_top = 140.0
+offset_right = 722.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 30
+text = "Number Converter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="."]
+offset_left = 957.0
+offset_top = -1.0
+offset_right = 997.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 30
+
+[node name="Input Field" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 498.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Input" type="Label" parent="Input Field"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontFile_7ygc3")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Num Result Field" type="CenterContainer" parent="."]
+offset_top = 304.0
+offset_right = 1152.0
+offset_bottom = 372.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Num Result Field"]
+layout_mode = 2
+
+[node name="Num Result" type="Label" parent="Num Result Field/PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text Result Field" type="CenterContainer" parent="."]
+offset_top = 368.0
+offset_right = 1152.0
+offset_bottom = 446.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Text Result Field"]
+layout_mode = 2
+
+[node name="Octal Number as Text" type="Label" parent="Text Result Field/PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_top = 456.0
+offset_right = 1152.0
+offset_bottom = 496.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Emphasis Result" type="Label" parent="CenterContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyboard Keys" type="CenterContainer" parent="."]
+offset_left = 293.0
+offset_top = 108.0
+offset_right = 832.0
+offset_bottom = 389.0
+theme = ExtResource("3_yvmwk")
+
+[node name="PanelContainer" type="PanelContainer" parent="Keyboard Keys"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Keyboard Keys/PanelContainer"]
+layout_mode = 2
+theme = ExtResource("3_yvmwk")
+
+[node name="Keyboard Keys" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_yvmwk")
+theme_override_font_sizes/font_size = 30
+text = "Keyboard Keys"
+horizontal_alignment = 1
+
+[node name="O Button" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "O-Button"
+horizontal_alignment = 1
+
+[node name="O Button Text" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = " Press 'o' for octal to add/remove the zero at the front of the number."
+horizontal_alignment = 1
+
+[node name="Enter Button" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Enter"
+horizontal_alignment = 1
+
+[node name="Enter Button Text" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Press 'Enter' to confirm and to convert the number."
+horizontal_alignment = 1
+
+[node name="Backspace" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Backspace"
+horizontal_alignment = 1
+
+[node name="Backspace Text" type="Label" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Press 'Backspace' to remove the last digit."
+horizontal_alignment = 1
+
+[node name="Confirm Button" type="Button" parent="Keyboard Keys/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_yvmwk")
+text = "Confirm"
+
+[connection signal="pressed" from="Keyboard Keys/PanelContainer/VBoxContainer/Confirm Button" to="." method="_on_confirm_button_pressed"]

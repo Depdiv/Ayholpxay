@@ -1,0 +1,256 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsogc85n6rxk"]
+
+[ext_resource type="Theme" uid="uid://bxn4usvia6u4w" path="res://Themes/Number Exercise/main_number_exercise.tres" id="1_3322r"]
+[ext_resource type="Script" uid="uid://b42y6g3oeg6kn" path="res://Scenes/Main Menu/settings_at_the_start.gd" id="2_j04my"]
+[ext_resource type="Script" uid="uid://cxe0un3afplq3" path="res://Scenes/Main Menu/main_menu.gd" id="3_xkk58"]
+[ext_resource type="Script" uid="uid://bj8s21jdo5yon" path="res://Scenes/Main Menu/selection_window.gd" id="4_hh37k"]
+[ext_resource type="Script" uid="uid://bypypbtwt0tb4" path="res://Scenes/Main Menu/settings_window.gd" id="5_greju"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1296.0
+offset_top = 2.0
+offset_right = 1398.0
+offset_bottom = 25.0
+text = "Version X.X.X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings at the Start" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1400.0
+offset_bottom = 900.0
+theme = ExtResource("1_3322r")
+script = ExtResource("2_j04my")
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings at the Start"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings at the Start/PanelContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Settings at the Start/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Language" type="Button" parent="Settings at the Start/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "English"
+
+[node name="Octal Sign" type="Button" parent="Settings at the Start/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Octal Sign: (°)"
+
+[node name="Separation Sign" type="Button" parent="Settings at the Start/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Separation Sign: (,)"
+
+[node name="Confirm" type="Button" parent="Settings at the Start/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ConfirmButton"
+text = "Confirm"
+
+[node name="Main Menu" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1400.0
+offset_bottom = 900.0
+theme = ExtResource("1_3322r")
+script = ExtResource("3_xkk58")
+
+[node name="PanelContainer" type="PanelContainer" parent="Main Menu"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/PanelContainer"]
+layout_mode = 2
+
+[node name="Ayholpxay" type="Label" parent="Main Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ayholpxay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(315, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Start"
+
+[node name="Settings" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Settings"
+
+[node name="Ko-Fi" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Donation (Ko-Fi)"
+
+[node name="Credits" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Github" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Github"
+
+[node name="Quit" type="Button" parent="Main Menu/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Quit"
+
+[node name="Selection Window" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1400.0
+offset_bottom = 900.0
+theme = ExtResource("1_3322r")
+script = ExtResource("4_hh37k")
+
+[node name="PanelContainer" type="PanelContainer" parent="Selection Window"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Selection Window/PanelContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Selection Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ayholpxay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number Converter" type="Button" parent="Selection Window/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(315, 0)
+layout_mode = 2
+focus_mode = 0
+text = "Number Converter"
+
+[node name="Number Exercise" type="Button" parent="Selection Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Number Exercise"
+
+[node name="Back" type="Button" parent="Selection Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="Settings Window" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1400.0
+offset_bottom = 900.0
+theme = ExtResource("1_3322r")
+script = ExtResource("5_greju")
+
+[node name="PanelContainer" type="PanelContainer" parent="Settings Window"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings Window/PanelContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Settings Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Language" type="Button" parent="Settings Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "English"
+
+[node name="Octal Sign" type="Button" parent="Settings Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Octal Sign: (°)"
+
+[node name="Separation Sign" type="Button" parent="Settings Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Separation Sign: (,)"
+
+[node name="Back" type="Button" parent="Settings Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Back"
+
+[node name="Credits Window" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1405.0
+offset_bottom = 908.0
+theme = ExtResource("1_3322r")
+
+[node name="PanelContainer" type="PanelContainer" parent="Credits Window"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits Window/PanelContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Credits Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tuna Fwumsyul" type="Label" parent="Credits Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"SimpleLabel"
+text = "Programmer: Tuna Fwumyul aka Roter Lotus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ko-Fi" type="Label" parent="Credits Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"SimpleLabel"
+text = "Ko-Fi: www.ko-fi.com/roter_lotus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Licence" type="Label" parent="Credits Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"SimpleLabel"
+text = "This programm is free an open-source (git-hub)"
+
+[node name="Back" type="Button" parent="Credits Window/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Zurück"
+
+[connection signal="start_settings_done" from="Settings at the Start" to="Main Menu" method="_signal_start_settings_done_emitted"]
+[connection signal="start_settings_done" from="Settings at the Start" to="Settings Window" method="_signal_start_settings_done_emitted"]
+[connection signal="pressed" from="Settings at the Start/PanelContainer/VBoxContainer/Language" to="Settings at the Start" method="_on_language_pressed"]
+[connection signal="pressed" from="Settings at the Start/PanelContainer/VBoxContainer/Octal Sign" to="Settings at the Start" method="_on_octal_sign_pressed"]
+[connection signal="pressed" from="Settings at the Start/PanelContainer/VBoxContainer/Separation Sign" to="Settings at the Start" method="_on_separation_sign_pressed"]
+[connection signal="pressed" from="Settings at the Start/PanelContainer/VBoxContainer/Confirm" to="Settings at the Start" method="_on_confirm_pressed"]
+[connection signal="selection_window_on" from="Main Menu" to="Selection Window" method="_on_main_menu_selection_window_on"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Start" to="Main Menu" method="_on_start_pressed"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Settings" to="Main Menu" method="_on_settings_pressed"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Ko-Fi" to="Main Menu" method="_on_ko_fi_pressed"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Credits" to="Main Menu" method="_on_credits_pressed"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Github" to="Main Menu" method="_on_git_hub_pressed"]
+[connection signal="pressed" from="Main Menu/PanelContainer/VBoxContainer/Quit" to="Main Menu" method="_on_quit_pressed"]
+[connection signal="pressed" from="Selection Window/PanelContainer/VBoxContainer/Number Converter" to="Selection Window" method="_on_number_converter_pressed"]
+[connection signal="pressed" from="Selection Window/PanelContainer/VBoxContainer/Number Exercise" to="Selection Window" method="_on_number_exercise_pressed"]
+[connection signal="pressed" from="Selection Window/PanelContainer/VBoxContainer/Back" to="Selection Window" method="_on_back_pressed"]
+[connection signal="settings_window_back_button" from="Settings Window" to="Main Menu" method="_signal_settings_window_back_button_emitted"]
+[connection signal="pressed" from="Settings Window/PanelContainer/VBoxContainer/Language" to="Settings Window" method="_on_language_pressed"]
+[connection signal="pressed" from="Settings Window/PanelContainer/VBoxContainer/Octal Sign" to="Settings Window" method="_on_octal_sign_pressed"]
+[connection signal="pressed" from="Settings Window/PanelContainer/VBoxContainer/Separation Sign" to="Settings Window" method="_on_separation_sign_pressed"]
+[connection signal="pressed" from="Settings Window/PanelContainer/VBoxContainer/Back" to="Settings Window" method="_on_back_pressed"]
+[connection signal="pressed" from="Credits Window/PanelContainer/VBoxContainer/Back" to="Main Menu" method="_on_credits_window_back_button"]

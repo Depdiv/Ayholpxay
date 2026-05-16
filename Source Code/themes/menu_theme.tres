@@ -1,9 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dd2dtqu1tvmjw"]
-
-[ext_resource type="StyleBox" uid="uid://ch22xyq5u5e7b" path="res://themes/style_box_flat_menu.tres" id="1_funo8"]
-
-[resource]
-Label/constants/line_spacing = 3
-Label/font_sizes/font_size = 28
-PanelContainer/styles/panel = ExtResource("1_funo8")
-VBoxContainer/constants/separation = 12

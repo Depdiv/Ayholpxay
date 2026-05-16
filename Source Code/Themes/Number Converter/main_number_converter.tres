@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://qjxiwwl0c3wq"]
+
+[ext_resource type="StyleBox" uid="uid://blt8h47gdyn0l" path="res://Themes/Number Converter/button_line_edit_theme.tres" id="1_lyvn8"]
+[ext_resource type="StyleBox" uid="uid://cvlybufyudnqb" path="res://Themes/Number Converter/confirm_button.tres" id="2_0pba6"]
+[ext_resource type="StyleBox" uid="uid://c2c0gdoyvfhsg" path="res://Themes/Number Converter/label_for_input.tres" id="2_imkvx"]
+[ext_resource type="StyleBox" uid="uid://ci61iap8nfulf" path="res://Themes/Number Converter/label_for_plain_text_empty_style_box.tres" id="2_jtw6w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pba6"]
+bg_color = Color(1, 0.79607844, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atgo0"]
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jtw6w"]
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.16924527, 0.16924533, 0.16924518, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lccl1"]
+content_margin_left = 75.0
+content_margin_top = 75.0
+content_margin_right = 75.0
+content_margin_bottom = 75.0
+bg_color = Color(0.19793722, 0.19793725, 0.19793713, 1)
+shadow_size = 5
+
+[resource]
+Button/font_sizes/font_size = 30
+Button/styles/normal = ExtResource("1_lyvn8")
+ConfirmButton/base_type = &"Button"
+ConfirmButton/styles/hover = SubResource("StyleBoxFlat_0pba6")
+ConfirmButton/styles/normal = ExtResource("2_0pba6")
+Label/font_sizes/font_size = 45
+Label/styles/normal = SubResource("StyleBoxEmpty_atgo0")
+LabelForInput/base_type = &"Label"
+LabelForInput/styles/normal = ExtResource("2_imkvx")
+LabelForPlainText/base_type = &"Label"
+LabelForPlainText/font_sizes/font_size = 30
+LabelForPlainText/styles/normal = ExtResource("2_jtw6w")
+LineEdit/font_sizes/font_size = 30
+LineEdit/styles/normal = SubResource("StyleBoxFlat_jtw6w")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_lccl1")
+VBoxContainer/constants/separation = 20

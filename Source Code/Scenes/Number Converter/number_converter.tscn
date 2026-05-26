@@ -27,6 +27,8 @@ layout_mode = 2
 [node name="Title" type="Label" parent="Window/PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Number Converter"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Input" type="Label" parent="Window/PanelContainer/VBoxContainer"]
 layout_mode = 2

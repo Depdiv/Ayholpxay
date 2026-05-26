@@ -118,7 +118,7 @@ func new_round() -> void:
 			hbox_emphasis.visible = false
 			remove_all_syllable_buttons()
 			octal_as_text = NumFuncs.octal_num_into_text(str(octal_num))
-			octal_syllables = NumFuncs.find_emphasis(octal_as_text)
+			octal_syllables = NumFuncs.find_emphasis(octal_as_text, octal_num)
 			
 			for i: int in octal_syllables.size():
 				if octal_syllables[i] == octal_syllables[i].to_upper():
@@ -139,7 +139,7 @@ func new_round() -> void:
 		if find_emphasis == true:
 			hbox_emphasis.visible = false
 			octal_as_text = NumFuncs.octal_num_into_text(str(octal_num))
-			octal_syllables = NumFuncs.find_emphasis(octal_as_text)
+			octal_syllables = NumFuncs.find_emphasis(octal_as_text, octal_num)
 			
 			for i: int in octal_syllables.size():
 				if octal_syllables[i] == octal_syllables[i].to_upper():
@@ -211,14 +211,14 @@ func _input_number() -> void:
 					
 					correct_label.text = "Correct!"
 					text_label.text = "The Answer:"
-					answer_label.text = str(octal_num)
+					answer_label.text = octal_sign + str(octal_num)
 					answer_window.visible = true
 				elif language_selected == "Deutsch":
 					score.text = "Score: " + NumFuncs.add_commata(current_score)
 					
 					correct_label.text = "Richtig!"
 					text_label.text = "Die Antwort:"
-					answer_label.text = str(octal_num)
+					answer_label.text = octal_sign + str(octal_num)
 					answer_window.visible = true
 			else:
 				if current_life - 1 > 0:
@@ -229,14 +229,14 @@ func _input_number() -> void:
 						
 						correct_label.text = "Wrong!"
 						text_label.text = "The Answer:"
-						answer_label.text = str(octal_num)
+						answer_label.text = octal_sign + str(octal_num)
 						answer_window.visible = true
 					elif language_selected == "Deutsch":
 						life.text = "Leben: " + NumFuncs.add_commata(current_life)
 						
 						correct_label.text = "Falsch!"
 						text_label.text = "Die Antwort:"
-						answer_label.text = str(octal_num)
+						answer_label.text = octal_sign + str(octal_num)
 						answer_window.visible = true
 					
 					one_time_bool = false
@@ -248,14 +248,14 @@ func _input_number() -> void:
 					if language_selected == "English":
 						correct_label.text = "Wrong!"
 						text_label.text = "The Answer:"
-						answer_label.text = str(deci_num)
+						answer_label.text = octal_sign + str(octal_num)
 						answer_window.visible = true
 					elif language_selected == "Deutsch":
 						life.text = "Leben: " + NumFuncs.add_commata(current_life)
 						
 						correct_label.text = "Falsch!"
 						text_label.text = "Die Antwort:"
-						answer_label.text = str(octal_num)
+						answer_label.text = octal_sign + str(octal_num)
 						answer_window.visible = true
 		
 		input_number.visible = false
@@ -268,14 +268,14 @@ func _find_emphasis() -> void:
 			
 			correct_label.text = "Correct!"
 			text_label.text = "The Answer:"
-			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text))
+			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text, octal_num))
 			answer_window.visible = true
 		elif language_selected == "Deutsch":
 			score.text = "Score: " + NumFuncs.add_commata(current_score)
 			
 			correct_label.text = "Richtig!"
 			text_label.text = "Die Antwort:"
-			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text))
+			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text, octal_num))
 			answer_window.visible = true
 	else:
 		if one_time_bool == true:
@@ -291,14 +291,14 @@ func _find_emphasis() -> void:
 			
 			correct_label.text = "Wrong!"
 			text_label.text = "The Answer:"
-			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text))
+			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text, octal_num))
 			answer_window.visible = true
 		elif language_selected == "Deutsch":
 			life.text = "Leben: " + NumFuncs.add_commata(current_life)
 			
 			correct_label.text = "Falsch!"
 			text_label.text = "Die Antwort:"
-			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text))
+			answer_label.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_as_text, octal_num))
 			answer_window.visible = true
 	remove_all_syllable_buttons()
 func _name_number() -> void:

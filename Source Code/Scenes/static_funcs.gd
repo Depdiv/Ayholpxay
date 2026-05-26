@@ -131,44 +131,50 @@ static func _separate_all_syllables(num_as_text: String) -> Array[String]:
 	result[result.size() - 1] += new_syllable
 	
 	return result
-static func find_emphasis(num_as_text: String) -> Array[String]:
-	var result: Array[String] = _separate_all_syllables(num_as_text)
+static func find_emphasis(num_as_text: String, octal_num: int) -> Array[String]:
+	var result: Array[String] = []
 	var exceptions: Array[String] = ["vol", "vo", "za", "zam"]
 	var emphasis_found: bool = false
+	var nums_from_zero_to_seven: Array = [["KEW"], ["'AW"], ["MU", "ne"], ["PXEY"], ["TSÌNG"], ["MRR"], ["PU", "kap"], ["KI", "nä"]]
 	
-	result.reverse()
-	
-	for i: int in result.size():
-		var it_is_an_exception: bool = false
+	if octal_num >= 0 and octal_num <= 7:
+		for i: int in nums_from_zero_to_seven[octal_num].size():
+			result.push_back(nums_from_zero_to_seven[octal_num][i])
+	else:
+		result = _separate_all_syllables(num_as_text)
+		result.reverse()
 		
-		if emphasis_found == false:
-			for exception: String in exceptions:
-				if result[i] == exception:
-					if exception == "vol" or exception == "zam":
-						if result.size() == 1:
-							result[i] = result[i].to_upper()
-							it_is_an_exception = true
-							emphasis_found = true
-							break
+		for i: int in result.size():
+			var it_is_an_exception: bool = false
+			
+			if emphasis_found == false:
+				for exception: String in exceptions:
+					if result[i] == exception:
+						if exception == "vol" or exception == "zam":
+							if result.size() == 1:
+								result[i] = result[i].to_upper()
+								it_is_an_exception = true
+								emphasis_found = true
+								break
+							else:
+								it_is_an_exception = true
+								break
 						else:
-							it_is_an_exception = true
-							break
-					else:
-						if (result.size() - 1) - i == 0:
-							result[i] = result[i].to_upper()
-							it_is_an_exception = true
-							emphasis_found = true
-							break
-						else:
-							it_is_an_exception = true
-							break
-		else:
-			break
+							if (result.size() - 1) - i == 0:
+								result[i] = result[i].to_upper()
+								it_is_an_exception = true
+								emphasis_found = true
+								break
+							else:
+								it_is_an_exception = true
+								break
+			else:
+				break
+			
+			if it_is_an_exception == false:
+				result[i] = result[i].to_upper()
+				break
 		
-		if it_is_an_exception == false:
-			result[i] = result[i].to_upper()
-			break
-	
-	result.reverse()
+		result.reverse()
 	
 	return result

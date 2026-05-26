@@ -13,4 +13,4 @@ extends Resource
 @export var find_emphasis_on: bool = false
 @export var name_number_on: bool = false
 @export var int_is_octal: bool = true
-@export var current_version: String = "Version 0.0.2"
+@export var current_version: String = "Version 0.0.3"

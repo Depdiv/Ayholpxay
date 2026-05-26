@@ -68,7 +68,7 @@ func _enter_pressed() -> void:
 				emphasis.text = "-"
 		else:
 			octal_as_text.text = NumFuncs.octal_num_into_text(str(octal_num))
-			emphasis.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_num_as_text))
+			emphasis.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_num_as_text, octal_num))
 		
 		input.text = "°"
 	else:
@@ -86,7 +86,7 @@ func _enter_pressed() -> void:
 				emphasis.text = "-"
 		else:
 			octal_as_text.text = NumFuncs.octal_num_into_text(str(octal_num))
-			emphasis.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_num_as_text))
+			emphasis.text = NumFuncs.display_syllables(NumFuncs.find_emphasis(octal_num_as_text, octal_num))
 		
 		input.text = ""
 func _on_confirm_pressed() -> void:
